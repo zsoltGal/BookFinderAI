@@ -48,17 +48,5 @@ Aplikácia podľa toho vyhľadá informácie z \*\*Google Books\*\* alebo odporu
 
 
 
----
-
-
-
-\## Spustenie projektu
-
-1\. Stiahni alebo klonuj repozitár:
-
-&nbsp;  ```bash
-
-&nbsp;  git clone https://github.com/USERNAME/smart-finder-ai.git
-
 
 
