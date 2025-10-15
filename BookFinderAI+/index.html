@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Finder AI+</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self';
+                 img-src 'self' https://source.unsplash.com https://books.googleusercontent.com https://books.google.com https://encrypted-tbn0.gstatic.com data:;
+                 style-src 'self' 'unsafe-inline';
+                 script-src 'self';
+                 connect-src 'self' https://www.googleapis.com https://api-inference.huggingface.co;
+                 frame-ancestors 'none'">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="topbar">
+    <h1>🤖 Smart Finder AI+</h1>
+    <button id="themeBtn">🌙</button>
+  </div>
+
+  <div class="container">
+    <aside class="sidebar">
+      <p id="subtitle">Vyhľadaj knihy alebo filmy pomocou umelej inteligencie</p>
+
+      <div class="filter-box">
+        <h3>Režim vyhľadávania</h3>
+        <label><input type="radio" name="mode" value="auto" checked> Automaticky (AI)</label>
+        <label><input type="radio" name="mode" value="books"> Len knihy</label>
+        <label><input type="radio" name="mode" value="movies"> Len filmy</label>
+      </div>
+
+      <div class="history-box">
+        <h3>Posledné hľadania</h3>
+        <ul id="searchHistory"></ul>
+      </div>
+
+      <div class="about-box">
+        <h3>ℹ️ O projekte</h3>
+        <p id="aboutText">
+          Smart Finder AI+ využíva umelú inteligenciu na rozoznanie, či hľadáš knihu alebo film.
+          Následne vyhľadá informácie z Google Books a filmy z Netflixu.
+        </p>
+        <button id="langBtn">🇬🇧 English</button>
+      </div>
+    </aside>
+
+    <main class="content">
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Zadaj názov knihy alebo filmu...">
+        <button id="searchBtn">Hľadať</button>
+      </div>
+
+      <div id="loading">🔄 Analyzujem cez AI...</div>
+      <div id="results"></div>
+    </main>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
